@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping>
+  <class name="com.vikhlaev.grow.hibernate3.Role" table="role">
+
+    <id name="id" column="id" type="int"> <!-- field id map to DB table column id_role-->
+      <generator class="native"/>
+    </id>
+
+    <property name="title" column="title" type="string"/>
+
+    <set name="users" table="user">
+      <key>
+        <column name="role_id" not-null="true"/>
+      </key>
+      <one-to-many class="com.vikhlaev.grow.hibernate3.model.User"/>
+    </set>
+
+  </class>
+</hibernate-mapping>

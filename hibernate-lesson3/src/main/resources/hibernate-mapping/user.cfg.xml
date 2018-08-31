@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--<!DOCTYPE hibernate3-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">-->
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+  <class name="com.vikhlaev.grow.hibernate3.model.User" table="user">
+
+    <id name="id" column="id" type="int"> <!-- field id map to DB table column id_user-->
+      <generator class="native"/>
+    </id>
+
+    <property name="name" column="name" type="string"/>
+
+    <property name="middleName" column="middleName" type="string"/>
+
+    <property name="lastName" column="lastName" type="string"/>
+
+    <property name="age" column="age" type="long"/>
+
+    <many-to-one name="role" class="com.vikhlaev.grow.hibernate3.model.Role">
+      <column name="role_id" not-null="true"/>
+    </many-to-one>
+
+  </class>
+</hibernate-mapping>
