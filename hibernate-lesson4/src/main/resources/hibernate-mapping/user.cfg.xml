@@ -1,0 +1,17 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+  <class name="com.vikhlaev.grow.hibernate4.model.User">
+    <id column="id" name="id" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="name" name="name" type="string"/>
+
+    <property column="middleName" name="middleName" type="string"/>
+
+    <property column="lastName" name="lastName" type="string"/>
+
+    <property column="age" name="age" type="long"/>
+
+    <one-to-one class="com.vikhlaev.grow.hibernate4.model.Role" name="role"/>
+
+  </class>
+</hibernate-mapping>

@@ -12,12 +12,11 @@ public class HibernateUtil {
     Configuration cfg = new Configuration().configure();
     StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
         .applySettings(cfg.getProperties());
-    sessionFactory  = cfg.buildSessionFactory();
+    sessionFactory = cfg.buildSessionFactory();
   }
 
-  public static SessionFactory getSessionFactory(){
+  public static SessionFactory getSessionFactory() {
     return sessionFactory;
   }
-
 
 }

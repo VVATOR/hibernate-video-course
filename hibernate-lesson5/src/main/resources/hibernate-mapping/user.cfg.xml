@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+  <class name="com.vikhlaev.grow.hibernate5.model.User" table="user">
+
+    <id column="id" name="id" type="long">
+      <generator class="native"/>
+    </id>
+
+    <property column="middleName" name="middleName" type="string"/>
+
+    <property column="lastName" name="lastName" type="string"/>
+
+    <property column="age" name="age" type="long"/>
+
+    <set name="roles" table="rel_user_role">
+      <key column="user_id"/>
+      <many-to-many class="com.vikhlaev.grow.hibernate5.model.Role" column="role_id"/>
+    </set>
+
+  </class>
+</hibernate-mapping>

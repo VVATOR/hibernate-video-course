@@ -4,19 +4,19 @@
 <hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
   <class name="com.vikhlaev.grow.hibernate3.model.User" table="user">
 
-    <id name="id" column="id" type="int"> <!-- field id map to DB table column id_user-->
+    <id column="id" name="id" type="long"> <!-- field id map to DB table column id_user-->
       <generator class="native"/>
     </id>
 
-    <property name="name" column="name" type="string"/>
+    <property column="name" name="name" type="string"/>
 
-    <property name="middleName" column="middleName" type="string"/>
+    <property column="middleName" name="middleName" type="string"/>
 
-    <property name="lastName" column="lastName" type="string"/>
+    <property column="lastName" name="lastName" type="string"/>
 
-    <property name="age" column="age" type="long"/>
+    <property column="age" name="age" type="long"/>
 
-    <many-to-one name="role" class="com.vikhlaev.grow.hibernate3.model.Role">
+    <many-to-one class="com.vikhlaev.grow.hibernate3.model.Role" name="role">
       <column name="role_id" not-null="true"/>
     </many-to-one>
 

@@ -5,7 +5,7 @@
   <session-factory>
 
     <property name="connection.driver_class">org.h2.Driver</property>
-    <property name="connection.url">jdbc:h2:database./hibernate-lesson-1</property>
+    <property name="connection.url">jdbc:h2:~/hibernate-lesson-1</property>
     <property name="connection.username">sa</property>
     <property name="connection.password"/>
     <property name="default_schema">PUBLIC</property>
@@ -15,9 +15,6 @@
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
     <property name="hbm2ddl.auto">create-drop</property>
-
-    <!--mapping -->
-    <mapping resource="user.cfg.xml"/>
 
   </session-factory>
 </hibernate-configuration>

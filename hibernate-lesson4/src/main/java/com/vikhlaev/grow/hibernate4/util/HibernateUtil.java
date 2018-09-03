@@ -1,4 +1,4 @@
-package com.vikhlaev.grow.hibernate3;
+package com.vikhlaev.grow.hibernate4.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -12,12 +12,11 @@ public class HibernateUtil {
     Configuration cfg = new Configuration().configure();
     StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
         .applySettings(cfg.getProperties());
-    sessionFactory = cfg.buildSessionFactory(builder.build());
+    sessionFactory = cfg.buildSessionFactory();
   }
 
   public static SessionFactory getSessionFactory() {
     return sessionFactory;
   }
-
 
 }

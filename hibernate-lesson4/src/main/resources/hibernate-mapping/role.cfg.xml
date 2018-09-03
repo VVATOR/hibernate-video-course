@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping>
+  <class name="com.vikhlaev.grow.hibernate4.model.Role" table="role">
+
+    <id column="id" name="id" type="long"> <!-- field id map to DB table column id_role-->
+      <generator class="native"/>
+    </id>
+
+    <property column="title" name="title" type="string"/>
+
+    <one-to-one class="com.vikhlaev.grow.hibernate4.model.User" name="user"/>
+
+  </class>
+</hibernate-mapping>
