@@ -16,6 +16,7 @@
     <module>hibernate-lesson8</module>
     <module>hibernate-lesson9</module>
     <module>hibernate-lesson10</module>
+    <module>hibernate-lesson11</module>
   </modules>
 
   <properties>
